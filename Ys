@@ -1,0 +1,504 @@
+{
+  "sites": [
+    {
+      "key": "乐多采集",
+      "name": "🎸乐多",
+      "type": 0,
+      "api": "http://cj.leduocaiji.com/inc/api.php",
+      "playUrl": "https://ldy.jx.cn/wp-api/ifrty.php?vid=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://github.com/laileslie76",
+      "categories": [
+        "国产剧",
+        "港台剧",
+        "欧美剧",
+        "日韩剧",
+        "泰剧",
+        "综艺"
+      ]
+    },
+    {
+      "key": "天空采集",
+      "name": "🌈天空",
+      "type": 1,
+      "api": "https://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8/?ac=list",
+      "playUrl": "https://jx.huishij.com/yun/?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://github.com/laileslie76",
+      "categories": [
+        "国产剧",
+        "港台剧",
+        "欧美剧",
+        "泰剧",
+        "综艺",
+        "电影"
+      ]
+    },
+    {
+      "key": "北斗星采集",
+      "name": "🌟北斗星",
+      "type": 1,
+      "api": "https://api.bdxapi.com/api.php/provide/vod/?ac=list",
+      "playUrl": "https://player.bdxzym3u8.com/dplayer/?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://github.com/laileslie76",
+      "categories": [
+        "国产剧",
+        "欧美剧",
+        "港台剧",
+        "泰剧",
+        "综艺",
+        "电影"
+      ]
+    },
+    {
+      "key": "番茄采集",
+      "name": "🍅番茄",
+      "type": 1,
+      "api": "http://api.fqzy.cc/api.php/provide/vod/?ac=list",
+      "playUrl": "https://dp.fqplayer.com/dplayer/?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://github.com/laileslie76",
+      "categories": [
+        "国产剧",
+        "港台剧",
+        "欧美剧",
+        "泰剧",
+        "综艺",
+        "电影"
+      ]
+    },
+    {
+      "key": "红牛采集",
+      "name": "🐂红牛",
+      "type": 1,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "playUrl": "https://www.tutukiki.com/m3u8/?url=",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://github.com/laileslie76",
+      "categories": [
+        "国产剧",
+        "港台剧",
+        "欧美剧",
+        "泰剧",
+        "综艺",
+        "港台剧",
+        "古装剧",
+        "动作片",
+        "爱情片",
+        "科幻片",
+        "武侠片",
+        "冒险片",
+        "惊骇片",
+        "恐怖片",
+        "魔幻片",
+        "警匪片",
+        "战争片",
+        "记录片",
+        "微电影",
+        "其他片",
+        "动画片"
+      ]
+    }
+  ],
+  "lives": [
+    {
+      "group": "自定义",
+      "channels": [
+        {
+          "name": "TVB翡翠",
+          "urls": [
+            "http://116.199.5.51:8114/00000000/hls/index.m3u8?Fsv_chan_hls_se_idx=188&FvSeid=1&Fsv_ctype=LIVES&Fsv_otype=1&Provider_id=&Pcontent_id=.m3u8\",             \"http://27.47.68.65:808/hls/36/index.m3u8\",             \"https://p2.weizan.cn/1646497941/13205559193952310/live.m3u8\",             \"http://116.199.5.52:8114/00000000/index.m3u8?&Fsv_ctype=LIVES&Fsv_otype=1&FvSeid=5abd1660af1babb4&Fsv_filetype=1&Fsv_ctype=LIVES&Fsv_cid=0&Fsv_chan_hls_se_idx=188&Fsv_rate_id=1&Fsv_SV_PARAM1=0&Fsv_ShiftEnable=0&Fsv_ShiftTsp=0&Provider_id=&Pcontent_id=&Fsv_CMSID=&Fsv_otype=1\",             \"https://www.chaojidianshi."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "astro",
+      "channels": [
+        {
+          "name": "TV1",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/286848"
+          ]
+        },
+        {
+          "name": "TV 2",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/158355"
+          ]
+        },
+        {
+          "name": "TV 3",
+          "urls": [
+            "https://tv.kpsvpn.com/tv3.m3u8"
+          ]
+        },
+        {
+          "name": "NTV7",
+          "urls": [
+            "https://tv.kpsvpn.com/Ntv7.m3u8"
+          ]
+        },
+        {
+          "name": "8TV",
+          "urls": [
+            "https://tv.kpsvpn.com/8tv.m3u8"
+          ]
+        },
+        {
+          "name": "8TV",
+          "urls": [
+            "https://raw.githubusercontent.com/samleong123/tonton_dailymotion_php/main/m3u8/8TV.m3u8"
+          ]
+        },
+        {
+          "name": "TVS HD",
+          "urls": [
+            "https://agsplayback01.astro.com.my:443/CH1/master_AGS_TVS_04.m3u8"
+          ]
+        },
+        {
+          "name": "Astro Awani",
+          "urls": [
+            "http://50.7.220.74:8278/Awani/playlist.m3u8?tid=m02000000000010117437&ct=17958&tsum=ffc03caf973a4c8871e4a8a18211b037"
+          ]
+        },
+        {
+          "name": "Astro AEC",
+          "urls": [
+            "http://50.7.220.74:8278/Aec/playlist.m3u8?tid=m02000000000015394736&ct=17957&tsum=1dcfc710d1e57d6048f64c2e0383ecd3"
+          ]
+        },
+        {
+          "name": "Astro AEC",
+          "urls": [
+            "http://iptv12k.com:35461/8032022060101/452381/709"
+          ]
+        },
+        {
+          "name": "Astro 华丽",
+          "urls": [
+            "http://50.7.220.74:8278/Wlt/playlist.m3u8?tid=m02000000000017284058&ct=17957&tsum=72aaa7dbf2a5d6166b065612f3e6c602"
+          ]
+        },
+        {
+          "name": "Astro 欢喜",
+          "urls": [
+            "http://50.7.220.74:8278/Huahee/playlist.m3u8?tid=m02000000000018660079&ct=17957&tsum=5ce7429a79a9a892208c316c2a8133ee"
+          ]
+        },
+        {
+          "name": "Astro 双星",
+          "urls": [
+            "http://50.7.220.74:8278/Shuangxing/playlist.m3u8?tid=m02000000000010638087&ct=17957&tsum=16035284df542c2d54efaee5e47bc535"
+          ]
+        },
+        {
+          "name": "Astro 全佳",
+          "urls": [
+            "http://iptv12k.com:35461/8032022060101/452381/710"
+          ]
+        },
+        {
+          "name": "Astro AOD",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/264512"
+          ]
+        },
+        {
+          "name": "Astro Supersport 1",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/146068"
+          ]
+        },
+        {
+          "name": "Astro Supersport 2",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/157556"
+          ]
+        },
+        {
+          "name": "Astro Supersport 3",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/157557"
+          ]
+        },
+        {
+          "name": "Astro Supersport 4",
+          "urls": [
+            "http://quality-restream.com:8080/linuxapp2021/M3jc66jD9UCnpK9v/157558"
+          ]
+        },
+        {
+          "name": "Arena 801",
+          "urls": [
+            "http://iptv12k.com:35461/8032022060101/452381/966"
+          ]
+        },
+        {
+          "name": "Arena 2",
+          "urls": [
+            "http://iptv12k.com:35461/8032022060101/452381/965"
+          ]
+        },
+        {
+          "name": "Xplore",
+          "urls": [
+            "http://xlpore-samsungus.amagi.tv/playlist.m3u8#https://cdn-ue1-prod.tsv2.amagi.tv/linear/samsungus-xplore-samsungus/playlist.m3u8?ads.did=%7BPSID%7D&ads.dnt=%7BTARGETOPT%7D&ads.us_privacy=1YNY&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D#https://xplore-plex.amagi.tv/amRdirect/us_privacy=1---&did=62274240-07e7-5d94-8dc8-ef68cf19e175&dnt=0&X-Plex-Token=EzEGy3aT4zydHG9xwDJa&channelId=5ff71b7e9298ba002e437eac&uid=1g09f8a2n-i8go-mmg-xt76-yov2gtlfm6b/hls/amagi_hls_data_plexAAAAA-litton-xplore-plex/CDN/playlist.m3u8"
+          ]
+        }
+      ]
+    }
+  ],
+  "parses": [
+    {
+      "name": "解析1",
+      "type": 0,
+      "url": "https://xxx.xxx?jx="
+    }
+  ],
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "letv",
+    "sohu",
+    "tudou",
+    "pptv",
+    "mgtv",
+    "wasu"
+  ],
+  "ijk": [
+    {
+      "group": "软解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "group": "硬解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "max-buffer-size",
+          "value": "5242880"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "ads": [
+    "mimg.0c1q0l.cn",
+    "www.googletagmanager.com",
+    "www.google-analytics.com",
+    "mc.usihnbcq.cn",
+    "mg.g1mm3d.cn",
+    "mscs.svaeuzh.cn",
+    "cnzz.hhttm.top",
+    "tp.vinuxhome.com",
+    "cnzz.mmstat.com",
+    "www.baihuillq.com",
+    "s23.cnzz.com",
+    "z3.cnzz.com",
+    "c.cnzz.com",
+    "stj.v1vo.top",
+    "z12.cnzz.com",
+    "img.mosflower.cn",
+    "tips.gamevvip.com",
+    "ehwe.yhdtns.com",
+    "xdn.cqqc3.com",
+    "www.jixunkyy.cn",
+    "sp.chemacid.cn",
+    "hm.baidu.com",
+    "s9.cnzz.com",
+    "z6.cnzz.com",
+    "um.cavuc.com",
+    "mav.mavuz.com",
+    "wofwk.aoidf3.com",
+    "z5.cnzz.com",
+    "xc.hubeijieshikj.cn",
+    "tj.tianwenhu.com",
+    "xg.gars57.cn",
+    "k.jinxiuzhilv.com",
+    "cdn.bootcss.com",
+    "ppl.xunzhuo123.com",
+    "xomk.jiangjunmh.top",
+    "img.xunzhuo123.com",
+    "z1.cnzz.com",
+    "s13.cnzz.com",
+    "xg.huataisangao.cn",
+    "z7.cnzz.com",
+    "xg.huataisangao.cn",
+    "z2.cnzz.com",
+    "s96.cnzz.com",
+    "q11.cnzz.com",
+    "thy.dacedsfa.cn",
+    "xg.whsbpw.cn",
+    "s19.cnzz.com",
+    "z8.cnzz.com",
+    "s4.cnzz.com",
+    "f5w.as12df.top",
+    "ae01.alicdn.com",
+    "www.92424.cn",
+    "k.wudejia.com",
+    "vivovip.mmszxc.top",
+    "qiu.xixiqiu.com",
+    "cdnjs.hnfenxun.com",
+    "cms.qdwght.com"
+  ]
+}
