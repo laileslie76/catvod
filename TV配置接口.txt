@@ -1,9 +1,0 @@
-﻿接口名称：CatVodTV-TangSan-qAmr1Pgh
-接口地址：https://pastebin.com/raw/qAmr1Pgh
-更新时间：基本与https://pastebin.com/izVq5sXv同步
-有效期：本接口长期有效，新规则同步至此接口，接口地址不变
-接口说明：本接口取自于猫影视TV官方TG群大佬唐三分享的接口链接，因原接口中custom_spider.jar网络地址在github上，新装用户无法从github上获取custom_spider.jar，会导致无法获取影视列表且无法播放的问题，我将custom_spider.jar网络地址设定为我转存的gitee上，这样能够解决custom_spider.jar获取的问题，其余内容没有变动。
-制作者：唐三
-分享者：yoyodadada
-TG频道：https://t.me/haoruanfenxiang
-TG群：https://t.me/haoruanfenxianggroup
