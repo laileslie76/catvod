@@ -7,7 +7,7 @@
   
  
     
-  
+    {"key":"考拉直链","name":"☮️考拉直链☮️","type":1,"api":"https://ikaola.tv/api.php/provide/vod/","searchable":1,"quickSearch":1},
 
     {"key":"csp_xpath_wmkk","name":"🍻完美看看(XP)🍻","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://home.jundie.top:81/Cat/MaooXP/wanmeikk.json"},
     
