@@ -97,7 +97,7 @@
     {"key":"番茄资源","name":"🍅番茄资源(切)🍅","type":1,"api":"http://api.fqzy.cc/api.php/provide/vod/","searchable":1,"quickSearch":1},
     {"key":"卧龙资源","name":"🐲卧龙资源(切)🐲","type":1,"api":"https://collect.wolongzyw.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
     {"key":"红牛资源","name":"🐃红牛资源(切)🐃","type":1,"api":"https://www.hongniuzy2.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-    {"key":"樱花资源","name":"🌺樱花资源(切)🌺","type":1,"api":"https://jx.yhzybf.com/player/jx.php?url=","searchable":1,"quickSearch":1},
+    {"key":"樱花资源","name":"🌺樱花资源(切)🌺","type":1,"api":" https://m3u8.apiyhzy.com/api.php/provide/vod/ ","searchable":1,"quickSearch":1},
     {"key":"想看资源","name":"👀想看资源(切)👀","type":1,"api":"https://m3u8.xiangkanapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
     {"key":"易看资源","name":"👁️易看资源(切)👁️","type":1,"api":"https://api.yikanapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
     {"key":"酷点资源","name":"🤘酷点资源(切)🤘","type":1,"api":"https://kudianzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
