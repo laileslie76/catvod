@@ -1,7 +1,7 @@
 {
   "spider":"  https://github.com/laileslie76/catvod/blob/main/custom_spider.jar   ",
   "lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cDovL2hvbWUuanVuZGllLnRvcDo4MS9DYXQvdHYvbGl2ZS50eHQ=
-   
+  “lives”： https://raw.githubusercontent.com/cai23511/yex/master/TVlist/20210808384.m3u
   "sites": [
     {
       "key": "LiteApple",
