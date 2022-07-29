@@ -20,7 +20,7 @@ lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&
     
 ## XPath系列
 
-    {"key":"csp_xpath_zxzj2","name":"🏠在线之家(XPF)🏠","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"clan://TVBox/MaooXP/zxzj2.json
+    {"key":"csp_xpath_zxzj2","name":"🏠在线之家(XPF)🏠","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://github.com/laileslie76/bread/blob/master/MeowXP/zxzj2.json“}，
     {"key":"csp_xpath_libv","name":"🗼Libvio(XPF)🗼","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"clan://TVBox/MaooXP/libv.json
     
 {"key":"293视频","name":"293视频(SP)","type":3,"api":"csp_SP293","searchable":1,"quickSearch":1,"filterable":1,"ext":""},
