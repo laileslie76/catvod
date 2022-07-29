@@ -7,16 +7,7 @@ lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&
 "site”：[{"key":"考拉直链","name":"☮️考拉直链☮️","type":1,"api":"https://ikaola.tv/api.php/provide/vod/","searchable":1,"quickSearch":1},
 {"key": "push_agent","name":"👾推送👾","type":3,"api":"csp_PushAgent","searchable":0,"quickSearch":0,"filterable":0,"ext":"1f373a68733e4dafa5fa28dca9826b35"},
 
- {
-      "key": "Bili",
-      "name": "B站",
-      "type": 3,
-      "api": "csp_BBB",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://gitea.com/Pandora2277/Box/raw/branch/master/sub/Bili.json"
-    },
+
     
 ## XPath系列
 
