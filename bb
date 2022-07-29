@@ -1,6 +1,6 @@
 
 {
-“spider”：“https://github.com/laileslie76/catvod/blob/main/box.jar“，
+“spider”：“https://github.com/laileslie76/catvod/blob/main/custom_spider.jar“，
 
 lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cDovL2hvbWUuanVuZGllLnRvcDo4MS9DYXQvdHYvbGl2ZS50eHQ=
 
