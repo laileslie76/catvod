@@ -31,7 +31,7 @@
     
     
     ## XPath系列
-    {"key":"csp_xpath_zxzj2","name":"🏠在线之家(XPF)🏠","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://home.jundie.top:81/Cat/MaooXP/zxzj2.json"},
+    {"key":"csp_xpath_zxzj2","name":"🏠在线之家(XPF)🏠","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"  https://github.com/laileslie76/bread/tree/master/MeowXP "},
     {"key":"csp_xpath_libv","name":"🗼Libvio(XPF)🗼","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://home.jundie.top:81/Cat/MaooXP/libv.json"},
     {"key":"csp_xpath_cokemv","name":"🥃Cokemv(XPF)🥃","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://home.jundie.top:81/Cat/MaooXP/cokemv.json"},
     {"key":"csp_xpath_ddg","name":"🐢达达龟(XPF)🐢","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://home.jundie.top:81/Cat/MaooXP/dadagui.json"},
