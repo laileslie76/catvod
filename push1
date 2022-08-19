@@ -1,0 +1,697 @@
+//
+
+//
+package com.github.catvod.spider;
+
+import android.content.Context;
+import android.text.TextUtils;
+import com.github.catvod.crawler.Spider;
+import com.github.catvod.crawler.SpiderDebug;
+import com.github.catvod.spider.merge.PL;
+import com.github.catvod.spider.merge.d;
+import com.github.catvod.spider.merge.o;
+import com.github.catvod.spider.merge.v0;
+import com.github.catvod.spider.merge.wR;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class PushAgent extends Spider {
+    public static Pattern F2 = Pattern.compile("www.aliyundrive.com/s/([^/]+)(/folder/([^/]+))?");
+    private static final Map<String, Long> Y = new HashMap();
+    private static final Map<String, String> Z = new HashMap();
+    public static String f = null;
+    private static long mF = 0;
+    private static final Pattern wY = Pattern.compile("(https://www.aliyundrive.com/s/[^\"]+)");
+    private static String z = "";
+
+    public String detailContent(List<String> list) {
+        String str = "";
+        try {
+            String str2 = (String) list.get(0);
+            Pattern pattern = F2;
+            String str3 = "mgtv.com";
+            String str4 = "qq.com";
+            String str5 = "vod_director";
+            String str6 = "vod_actor";
+            String str7 = "vod_remarks";
+            String str8 = "vod_area";
+            String str9 = "vod_year";
+            String str10 = "head > title";
+            Matcher matcher = pattern.matcher(str2);
+            Matcher matcher2 = wY.matcher(str2);
+            String str11 = "type_name";
+            String str12 = "立即播放$";
+            String str13 = "vod_pic";
+            String str14 = "vod_play_from";
+            String str15 = "vod_name";
+            String str16 = "jx";
+            String str17 = "vod_id";
+            String str18 = "vod_content";
+            String str19 = "list";
+            String str20 = "vod_play_url";
+            JSONObject jSONObject;
+            StringBuilder stringBuilder;
+            if (!d.Y(str2) || str2.contains(str4) || str2.contains(str3)) {
+                String str21 = str12;
+                String str22 = str14;
+                String str23 = str19;
+                str12 = str3;
+                str3 = str18;
+                JSONObject jSONObject2;
+                JSONArray jSONArray;
+                String str24;
+                String str25;
+                int i;
+                StringBuilder stringBuilder2;
+                JSONArray jSONArray2;
+                JSONObject jSONObject3;
+                if (d.Y(str2) && str2.contains(str4)) {
+                    String str26;
+                    ArrayList arrayList = new ArrayList();
+                    str18 = str3;
+                    jSONObject2 = new JSONObject();
+                    jSONArray = new JSONArray();
+                    JSONObject jSONObject4 = new JSONObject();
+                    str14 = str5;
+                    PL z = v0.z(o.E(str2, f()));
+                    str10 = z.ys(str10).Y();
+                    str19 = str6;
+                    ArrayList ys = z.ys("div.episode-list-rect__item");
+                    if (ys.isEmpty()) {
+                        str26 = str;
+                        str24 = str7;
+                        str25 = str8;
+                        StringBuilder stringBuilder3 = new StringBuilder();
+                        stringBuilder3.append(str21);
+                        stringBuilder3.append(str2);
+                        jSONObject4.put(str20, stringBuilder3.toString());
+                    } else {
+                        i = 0;
+                        while (i < ys.size()) {
+                            wR wRVar = (wR) ys.get(i);
+                            ArrayList arrayList2 = ys;
+                            str24 = str7;
+                            str5 = wRVar.ys("div").z("data-vid");
+                            str25 = str8;
+                            str7 = wRVar.ys("div").z("data-cid");
+                            StringBuilder stringBuilder4 = new StringBuilder();
+                            str26 = str;
+                            try {
+                                stringBuilder4.append("https://v.qq.com/x/cover/");
+                                stringBuilder4.append(str7);
+                                stringBuilder4.append("/");
+                                stringBuilder4.append(str5);
+                                str = stringBuilder4.toString();
+                                str5 = wRVar.ys("div span").Y();
+                                stringBuilder2 = new StringBuilder();
+                                stringBuilder2.append(str5);
+                                stringBuilder2.append("$");
+                                stringBuilder2.append(str);
+                                arrayList.add(stringBuilder2.toString());
+                                i++;
+                                ys = arrayList2;
+                                str7 = str24;
+                                str8 = str25;
+                                str = str26;
+                            } catch (Throwable unused) {
+                                str = str26;
+                            }
+                        }
+                        str26 = str;
+                        str24 = str7;
+                        str25 = str8;
+                        jSONObject4.put(str20, TextUtils.join("#", arrayList));
+                    }
+                    jSONObject4.put(str17, str2);
+                    jSONObject4.put(str15, str10);
+                    jSONObject4.put(str13, "https://img2.baidu.com/it/u=2655029475,2190949369&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=593");
+                    jSONObject4.put(str11, "腾讯TV");
+                    str = str26;
+                    jSONObject4.put(str9, str);
+                    jSONObject4.put(str25, str);
+                    jSONObject4.put(str24, str);
+                    jSONObject4.put(str19, str);
+                    jSONObject4.put(str14, str);
+                    jSONObject4.put(str18, str2);
+                    jSONObject4.put(str22, str16);
+                    jSONArray2 = jSONArray;
+                    jSONArray2.put(jSONObject4);
+                    jSONObject3 = jSONObject2;
+                    jSONObject3.put(str23, jSONArray2);
+                    return jSONObject3.toString();
+                }
+                JSONObject jSONObject5;
+                JSONArray jSONObject6;
+                str14 = str10;
+                str4 = str8;
+                str10 = str22;
+                str8 = str3;
+                str3 = str23;
+                String str27 = str7;
+                str7 = str5;
+                str5 = str27;
+                if (d.Y(str2)) {
+                    str22 = str10;
+                    if (str2.contains(str12)) {
+                        Object obj;
+                        ArrayList arrayList3 = new ArrayList();
+                        str18 = str8;
+                        jSONObject2 = new JSONObject();
+                        jSONArray = new JSONArray();
+                        JSONObject jSONObject7 = new JSONObject();
+                        str12 = str7;
+                        Matcher matcher3 = Pattern.compile("https://\\S+mgtv.com/b/(\\d+)/(\\d+).html.*").matcher(str2);
+                        if (matcher3.find()) {
+                            str19 = str6;
+                            stringBuilder2 = new StringBuilder();
+                            str24 = str5;
+                            stringBuilder2.append("https://pcweb.api.mgtv.com/episode/list?video_id=");
+                            stringBuilder2.append(matcher3.group(2));
+                            str25 = str4;
+                            jSONObject5 = new JSONObject(o.E(stringBuilder2.toString(), z()));
+                            String string = jSONObject5.getJSONObject("data").getJSONObject("info").getString("title");
+                            jSONObject6 = new JSONObject(jSONObject5.getJSONObject("data").getString(str3));
+                            if (jSONObject6.length() > 0) {
+                                i = 0;
+                                while (i < jSONObject6.length()) {
+                                    jSONObject = jSONObject6.getJSONObject(i);
+                                    JSONArray jSONArray3 = jSONObject6;
+                                    if (jSONObject.getString("isIntact").equals("1")) {
+                                        str5 = jSONObject.getString("t4");
+                                        str4 = jSONObject.getString("video_id");
+                                        stringBuilder2 = new StringBuilder();
+                                        str23 = str3;
+                                        stringBuilder2.append("https://www.mgtv.com/b/");
+                                        stringBuilder2.append(matcher3.group(1));
+                                        stringBuilder2.append("/");
+                                        stringBuilder2.append(str4);
+                                        stringBuilder2.append(".html");
+                                        str3 = stringBuilder2.toString();
+                                        StringBuilder stringBuilder5 = new StringBuilder();
+                                        stringBuilder5.append(str5);
+                                        stringBuilder5.append("$");
+                                        stringBuilder5.append(str3);
+                                        arrayList3.add(stringBuilder5.toString());
+                                    } else {
+                                        str23 = str3;
+                                    }
+                                    i++;
+                                    jSONObject6 = jSONArray3;
+                                    str3 = str23;
+                                }
+                                str23 = str3;
+                                jSONObject7.put(str20, TextUtils.join("#", arrayList3));
+                            } else {
+                                str23 = str3;
+                                stringBuilder = new StringBuilder();
+                                stringBuilder.append(str21);
+                                stringBuilder.append(str2);
+                                jSONObject7.put(str20, stringBuilder.toString());
+                            }
+                            obj = string;
+                        } else {
+                            str23 = str3;
+                            str25 = str4;
+                            str24 = str5;
+                            str19 = str6;
+                            obj = str;
+                        }
+                        jSONObject7.put(str17, str2);
+                        jSONObject7.put(str15, obj);
+                        jSONObject7.put(str13, "https://img2.baidu.com/it/u=2562822927,704100654&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=380");
+                        jSONObject7.put(str11, "芒果TV");
+                        jSONObject7.put(str9, str);
+                        jSONObject7.put(str25, str);
+                        jSONObject7.put(str24, str);
+                        jSONObject7.put(str19, str);
+                        jSONObject7.put(str12, str);
+                        jSONObject7.put(str18, str2);
+                        jSONObject7.put(str22, str16);
+                        jSONArray2 = jSONArray;
+                        jSONArray2.put(jSONObject7);
+                        jSONObject3 = jSONObject2;
+                        jSONObject3.put(str23, jSONArray2);
+                        return jSONObject3.toString();
+                    }
+                    str4 = str3;
+                    str10 = str8;
+                    str3 = str22;
+                } else {
+                    str4 = str3;
+                    str3 = str10;
+                    str10 = str8;
+                }
+                JSONObject jSONObject8;
+                StringBuilder stringBuilder6;
+                if (d.Z(str2)) {
+                    jSONObject8 = new JSONObject();
+                    jSONObject6 = new JSONArray();
+                    jSONObject5 = new JSONObject();
+                    jSONObject5.put(str17, str2);
+                    jSONObject5.put(str15, str2);
+                    jSONObject5.put(str13, "https://img.zcool.cn/community/0123545c74c5aea801213f261297df.png");
+                    jSONObject5.put(str11, "直连");
+                    jSONObject5.put(str3, "player");
+                    stringBuilder6 = new StringBuilder();
+                    stringBuilder6.append(str21);
+                    stringBuilder6.append(str2);
+                    jSONObject5.put(str20, stringBuilder6.toString());
+                    jSONObject6.put(jSONObject5);
+                    jSONObject8.put(str4, jSONObject6);
+                    return jSONObject8.toString();
+                }
+                if (!str2.startsWith("magnet")) {
+                    if (!str2.startsWith("ed2k")) {
+                        if (str2.startsWith("http") && matcher2.find()) {
+                            return getAliContent(list);
+                        }
+                        if (!(!str2.startsWith("http") || matcher.find() || matcher2.find())) {
+                            str21 = v0.z(o.E(str2, null)).ys(str14).Y();
+                            JSONObject jSONObject9 = new JSONObject();
+                            JSONArray jSONArray4 = new JSONArray();
+                            JSONObject jSONObject10 = new JSONObject();
+                            jSONObject10.put(str17, str2);
+                            jSONObject10.put(str15, str21);
+                            jSONObject10.put(str13, "https://pic.rmb.bdstatic.com/bjh/1d0b02d0f57f0a42201f92caba5107ed.jpeg");
+                            jSONObject10.put(str11, "嗅探");
+                            jSONObject10.put(str10, str2);
+                            jSONObject10.put(str3, "嗅探");
+                            stringBuilder = new StringBuilder();
+                            stringBuilder.append("立即播放嗅探$");
+                            stringBuilder.append(str2);
+                            jSONObject10.put(str20, stringBuilder.toString());
+                            jSONArray4.put(jSONObject10);
+                            jSONObject9.put(str4, jSONArray4);
+                            return jSONObject9.toString();
+                        }
+                        return str;
+                    }
+                }
+                jSONObject8 = new JSONObject();
+                jSONObject6 = new JSONArray();
+                jSONObject5 = new JSONObject();
+                jSONObject5.put(str17, str2);
+                jSONObject5.put(str15, str2);
+                jSONObject5.put(str13, "https://img2.baidu.com/it/u=1609185522,4130752057&fm=253&f=JPEG");
+                jSONObject5.put(str11, "磁力");
+                jSONObject5.put(str3, "磁力测试");
+                stringBuilder6 = new StringBuilder();
+                stringBuilder6.append(str21);
+                stringBuilder6.append(str2);
+                jSONObject5.put(str20, stringBuilder6.toString());
+                jSONObject6.put(jSONObject5);
+                jSONObject8.put(str4, jSONObject6);
+                str = jSONObject8.toString();
+                return str;
+            }
+            str10 = v0.z(o.E(str2, null)).ys(str10).Y();
+            JSONObject jSONObject11 = new JSONObject();
+            JSONArray jSONArray5 = new JSONArray();
+            jSONObject = new JSONObject();
+            jSONObject.put(str17, str2);
+            jSONObject.put(str15, str10);
+            jSONObject.put(str13, "https://img.zcool.cn/community/0123545c74c5aea801213f261297df.png");
+            jSONObject.put(str11, "官源");
+            jSONObject.put(str9, str);
+            jSONObject.put(str8, str);
+            jSONObject.put(str7, str);
+            jSONObject.put(str6, str);
+            jSONObject.put(str5, str);
+            jSONObject.put(str18, str);
+            jSONObject.put(str14, str16);
+            stringBuilder = new StringBuilder();
+            stringBuilder.append(str12);
+            stringBuilder.append(str2);
+            jSONObject.put(str20, stringBuilder.toString());
+            jSONArray5.put(jSONObject);
+            jSONObject11.put(str19, jSONArray5);
+            return jSONObject11.toString();
+        } catch (Throwable unused2) {
+        }
+    }
+
+    public String getAliContent(List<String> list) {
+        String str = "type";
+        String str2 = "";
+        int i = 0;
+        try {
+            String trim = ((String) list.get(0)).trim();
+            Matcher matcher = F2.matcher(trim);
+            if (!matcher.find()) {
+                return str2;
+            }
+            String group = matcher.group(1);
+            String group2 = matcher.groupCount() == 3 ? matcher.group(3) : str2;
+            JSONObject jSONObject = new JSONObject();
+            jSONObject.put("share_id", group);
+            JSONObject jSONObject2 = new JSONObject(mF("https://api.aliyundrive.com/adrive/v3/share_link/get_share_by_anonymous", jSONObject.toString(), z()));
+            JSONArray jSONArray = jSONObject2.getJSONArray("file_infos");
+            if (jSONArray.length() == 0) {
+                return str2;
+            }
+            jSONObject = null;
+            String str3 = "file_id";
+            if (TextUtils.isEmpty(group2)) {
+                jSONObject = jSONArray.getJSONObject(0);
+                group2 = jSONObject.getString(str3);
+            } else {
+                for (int i2 = 0; i2 < jSONArray.length(); i2++) {
+                    JSONObject jSONObject3 = jSONArray.getJSONObject(i2);
+                    if (jSONObject3.getString(str3).equals(jSONObject3.getString(str3))) {
+                        jSONObject = jSONObject3;
+                        break;
+                    }
+                }
+                if (jSONObject == null) {
+                    return str2;
+                }
+            }
+            JSONObject jSONObject4 = new JSONObject();
+            jSONObject4.put("vod_id", trim);
+            jSONObject4.put("vod_name", jSONObject2.getString("share_name"));
+            jSONObject4.put("vod_pic", jSONObject2.getString("avatar"));
+            jSONObject4.put("vod_content", trim);
+            jSONObject4.put("vod_play_from", "AliYun");
+            ArrayList arrayList = new ArrayList();
+            if (jSONObject.getString(str).equals("folder")) {
+                str = F2(group, str2);
+                HashMap hashMap = new HashMap();
+                listFiles(hashMap, group, str, group2);
+                ArrayList arrayList2 = new ArrayList(hashMap.keySet());
+                Collections.sort(arrayList2);
+                Iterator it = arrayList2.iterator();
+                while (it.hasNext()) {
+                    group2 = (String) it.next();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(group2);
+                    stringBuilder.append("$");
+                    stringBuilder.append((String) hashMap.get(group2));
+                    arrayList.add(stringBuilder.toString());
+                }
+                arrayList2 = new ArrayList();
+                while (i < 4) {
+                    arrayList2.add(TextUtils.join("#", arrayList));
+                    i++;
+                }
+                jSONObject4.put("vod_play_url", TextUtils.join("$$$", arrayList2));
+                JSONObject jSONObject5 = new JSONObject();
+                JSONArray jSONArray2 = new JSONArray();
+                jSONArray2.put(jSONObject4);
+                jSONObject5.put("list", jSONArray2);
+                return jSONObject5.toString();
+            }
+            if (jSONObject.getString(str).equals("file")) {
+                boolean equals = jSONObject.getString("category").equals("video");
+            }
+            return str2;
+        } catch (Exception e) {
+            SpiderDebug.log(e);
+            return str2;
+        }
+    }
+
+    public String playerContent(String str, String str2, List<String> list) {
+        String str3 = "";
+        Object obj = -1;
+        try {
+            int hashCode = str.hashCode();
+            String str4 = "jx";
+            if (hashCode != -985752863) {
+                if (hashCode != 3406) {
+                    if (hashCode != 706173) {
+                        if (hashCode == 1963852404) {
+                            if (str.equals("AliYun")) {
+                                obj = 3;
+                            }
+                        }
+                    } else if (str.equals("嗅探")) {
+                        obj = 2;
+                    }
+                } else if (str.equals(str4)) {
+                    obj = null;
+                }
+            } else if (str.equals("player")) {
+                obj = 1;
+            }
+            str = "url";
+            String str5 = "parse";
+            JSONObject jSONObject;
+            if (obj != null) {
+                String str6 = "playUrl";
+                if (obj == 1) {
+                    jSONObject = new JSONObject();
+                    jSONObject.put(str5, 0);
+                    jSONObject.put(str6, str3);
+                    jSONObject.put(str, str2);
+                    return jSONObject.toString();
+                } else if (obj == 2) {
+                    jSONObject = new JSONObject();
+                    jSONObject.put(str5, 1);
+                    jSONObject.put(str6, str3);
+                    jSONObject.put(str, str2);
+                    return jSONObject.toString();
+                } else if (obj != 3) {
+                    return str3;
+                } else {
+                    wY();
+                    String[] split = str2.split("\\+");
+                    str2 = Y(split[0], split[1], split[2], split[3]);
+                    HashMap hashMap = new HashMap();
+                    o.I(str2, z(), hashMap);
+                    str2 = o.Y(hashMap);
+                    jSONObject = new JSONObject();
+                    jSONObject.put("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36");
+                    jSONObject.put("referer", "https://www.aliyundrive.com/");
+                    JSONObject jSONObject2 = new JSONObject();
+                    jSONObject2.put(str5, "0");
+                    jSONObject2.put(str6, str3);
+                    jSONObject2.put("header", jSONObject.toString());
+                    jSONObject2.put(str, str2);
+                    return jSONObject2.toString();
+                }
+            }
+            jSONObject = new JSONObject();
+            jSONObject.put(str5, 1);
+            jSONObject.put(str4, "1");
+            jSONObject.put(str, str2);
+            return jSONObject.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            SpiderDebug.log(e);
+        }
+    }
+
+    public void listFiles(Map<String, String> map, String str, String str2, String str3) {
+        Throwable e;
+        Map<String, String> map2 = map;
+        String str4 = str;
+        String str5 = str2;
+        String str6 = "_";
+        String str7 = "name";
+        String str8 = "+";
+        try {
+            String str9 = "https://api.aliyundrive.com/adrive/v3/file/list";
+            Map z = z();
+            z.put("x-share-token", str5);
+            JSONObject jSONObject = new JSONObject();
+            jSONObject.put("image_thumbnail_process", "image/resize,w_160/format,jpeg");
+            jSONObject.put("image_url_process", "image/resize,w_1920/format,jpeg");
+            jSONObject.put("limit", 100);
+            jSONObject.put("order_by", str7);
+            jSONObject.put("order_direction", "ASC");
+            jSONObject.put("parent_file_id", str3);
+            jSONObject.put("share_id", str4);
+            jSONObject.put("video_thumbnail_process", "video/snapshot,t_1000,f_jpg,ar_auto,w_300");
+            CharSequence charSequence = "";
+            ArrayList arrayList = new ArrayList();
+            int i = 1;
+            while (i <= 50 && (i < 2 || !TextUtils.isEmpty(charSequence))) {
+                String str10;
+                Map map3;
+                jSONObject.put("marker", charSequence);
+                JSONObject jSONObject2 = new JSONObject(mF(str9, jSONObject.toString(), z));
+                JSONArray jSONArray = jSONObject2.getJSONArray("items");
+                int i2 = 0;
+                while (i2 < jSONArray.length()) {
+                    JSONObject jSONObject3 = jSONArray.getJSONObject(i2);
+                    str10 = str9;
+                    String str11 = "file_id";
+                    if (jSONObject3.getString("type").equals("folder")) {
+                        arrayList.add(jSONObject3.getString(str11));
+                        map3 = z;
+                    } else {
+                        map3 = z;
+                        if (jSONObject3.getString("mime_type").contains("video")) {
+                            str9 = jSONObject3.getString(str7).replace("#", str6).replace("$", str6);
+                            String string = jSONObject3.getString("category");
+                            String string2 = jSONObject3.getString(str11);
+                            StringBuilder stringBuilder = new StringBuilder();
+                            stringBuilder.append(str4);
+                            stringBuilder.append(str8);
+                            stringBuilder.append(str5);
+                            stringBuilder.append(str8);
+                            stringBuilder.append(string2);
+                            stringBuilder.append(str8);
+                            stringBuilder.append(string);
+                            map2.put(str9, stringBuilder.toString());
+                        }
+                    }
+                    i2++;
+                    str9 = str10;
+                    z = map3;
+                }
+                str10 = str9;
+                map3 = z;
+                charSequence = jSONObject2.getString("next_marker");
+                i++;
+                str9 = str10;
+                z = map3;
+            }
+            Iterator it = arrayList.iterator();
+            while (it.hasNext()) {
+                try {
+                    listFiles(map2, str4, str5, (String) it.next());
+                } catch (Throwable e2) {
+                    try {
+                        SpiderDebug.log(e2);
+                        return;
+                    } catch (Exception e3) {
+                        e2 = e3;
+                        SpiderDebug.log(e2);
+                    }
+                }
+            }
+        } catch (Exception e4) {
+            e2 = e4;
+            SpiderDebug.log(e2);
+        }
+    }
+
+    private static String Y(String str, String str2, String str3, String str4) {
+        String str5 = "video";
+        String str6 = "";
+        try {
+            JSONObject jSONObject;
+            Object str7;
+            Object str32;
+            HashMap z = z();
+            z.put("x-share-token", str2);
+            z.put("authorization", z);
+            String str8 = "file_id";
+            String str9 = "share_id";
+            if (str4.equals(str5)) {
+                jSONObject = new JSONObject();
+                jSONObject.put(str9, str7);
+                jSONObject.put("category", "live_transcoding");
+                jSONObject.put(str8, str32);
+                jSONObject.put("template_id", str6);
+                JSONObject jSONObject2 = new JSONObject(mF("https://api.aliyundrive.com/v2/file/get_share_link_video_preview_play_info", jSONObject.toString(), z));
+                str7 = jSONObject2.getString(str9);
+                str32 = jSONObject2.getString(str8);
+            }
+            str2 = "https://api.aliyundrive.com/v2/file/get_share_link_download_url";
+            jSONObject = new JSONObject();
+            if (str4.equals(str5)) {
+                jSONObject.put("expire_sec", 600);
+                jSONObject.put(str8, str32);
+                jSONObject.put(str9, str7);
+            }
+            if (str4.equals("audio")) {
+                jSONObject.put(str9, str7);
+                jSONObject.put("get_audio_play_info", true);
+                jSONObject.put(str8, str32);
+            }
+            return new JSONObject(mF(str2, jSONObject.toString(), z)).getString("download_url");
+        } catch (Exception e) {
+            SpiderDebug.log(e);
+            return str6;
+        }
+    }
+
+    private static synchronized String F2(String str, String str2) {
+        synchronized (PushAgent.class) {
+            try {
+                long Z = Z();
+                Map map = Z;
+                String str3 = (String) map.get(str);
+                Map map2 = Y;
+                Long l = (Long) map2.get(str);
+                if (TextUtils.isEmpty(str3) || l.longValue() - Z <= 600) {
+                    JSONObject jSONObject = new JSONObject();
+                    jSONObject.put("share_pwd", str2);
+                    jSONObject.put("share_id", str);
+                    jSONObject = new JSONObject(mF("https://api.aliyundrive.com/v2/share_link/get_share_token", jSONObject.toString(), z()));
+                    str2 = jSONObject.getString("share_token");
+                    map2.put(str, Long.valueOf(Z + jSONObject.getLong("expires_in")));
+                    map.put(str, str2);
+                    return str2;
+                }
+                return str3;
+            } catch (Exception e) {
+                SpiderDebug.log(e);
+                return "";
+            }
+        }
+    }
+
+    private static void wY() {
+        String str = "refresh_token";
+        long Z = Z();
+        if (z.isEmpty() || mF - Z <= 600) {
+            try {
+                JSONObject jSONObject = new JSONObject();
+                jSONObject.put(str, f);
+                jSONObject.put("grant_type", str);
+                JSONObject jSONObject2 = new JSONObject(mF("https://auth.aliyundrive.com/v2/account/token", jSONObject.toString(), z()));
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.append(jSONObject2.getString("token_type"));
+                stringBuilder.append(" ");
+                stringBuilder.append(jSONObject2.getString("access_token"));
+                z = stringBuilder.toString();
+                mF = Z + jSONObject2.getLong("expires_in");
+            } catch (Exception e) {
+                SpiderDebug.log(e);
+            }
+        }
+    }
+
+    public void init(Context context, String str) {
+        super.init(context, str);
+        if (str.startsWith("http")) {
+            f = o.E(str, f());
+        } else {
+            f = str;
+        }
+    }
+
+    private static String mF(String str, String str2, Map<String, String> map) {
+        1 1 = new 1();
+        o.F2(o.Z(), str, str2, map, 1);
+        return (String) 1.getResult();
+    }
+
+    private static HashMap<String, String> z() {
+        HashMap hashMap = new HashMap();
+        hashMap.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36");
+        hashMap.put("Referer", "https://www.aliyundrive.com/");
+        return hashMap;
+    }
+
+    private static HashMap<String, String> f() {
+        HashMap hashMap = new HashMap();
+        hashMap.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36");
+        return hashMap;
+    }
+
+    protected static long Z() {
+        return (System.currentTimeMillis() / 1000) + 0;
+    }
+}
